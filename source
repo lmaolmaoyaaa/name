@@ -1,122 +1,108 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
-local ScreenGui = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local TextButton = Instance.new("TextButton")
-local button = Instance.new("TextButton")
-local two = Instance.new("TextButton")
-local three = Instance.new("TextButton")
-local Fly = Instance.new("TextButton")
-local vhub = Instance.new("TextButton")
-
---Properties:
-
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Frame.Parent = ScreenGui
-Frame.Active = true
-Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame.Position = UDim2.new(0.279595047, 0, 0.191198796, 0)
-Frame.Size = UDim2.new(0, 515, 0, 374)
-
-TextButton.Parent = Frame
-TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.Position = UDim2.new(0.0407766998, 0, 0.14973262, 0)
-TextButton.Size = UDim2.new(0, 200, 0, 50)
-TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = "INF Yield"
-TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.TextScaled = true
-TextButton.TextSize = 14.000
-TextButton.TextWrapped = true
-TextButton.MouseButton1Down:Connect(function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+ 
+ 
+local Window = Library.CreateLib("Ours only", "DarkTheme")
+ 
+ 
+local Tab = Window:NewTab("Free characters")
+ 
+ 
+local Section = Tab:NewSection("Free characters")
+ 
+Section:NewButton("PlungerCameraGuy [Glitch](300)", "ButtonInfo", function()
+    local player = game.Players.LocalPlayer
+local character = player.Character
+local rightUpperLeg = character:WaitForChild("RightUpperLeg")
+ 
+local args = {
+    [1] = "PlungerCameraGuy [Glitch]",
+    [2] = rightUpperLeg.CFrame,
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("SpawnTower"):InvokeServer(unpack(args))
+ 
 end)
-
-button.Name = "button"
-button.Parent = Frame
-button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-button.Position = UDim2.new(0.524271846, 0, 0.14973262, 0)
-button.Size = UDim2.new(0, 200, 0, 50)
-button.Font = Enum.Font.SourceSans
-button.Text = "Keyboard Script"
-button.TextColor3 = Color3.fromRGB(0, 0, 0)
-button.TextScaled = true
-button.TextSize = 14.000
-button.TextWrapped = true
-button.MouseButton1Down:Connect(function()
-	loadstring(game:HttpGet("https://pastebin.com/raw/pyWtyw3K"))()
+ 
+Section:NewButton("TitanTVMan(5000)", "ButtonInfo", function()
+    local player = game.Players.LocalPlayer
+local character = player.Character
+local rightUpperLeg = character:WaitForChild("RightUpperLeg")
+ 
+local args = {
+    [1] = "TitanTVMan",
+    [2] = rightUpperLeg.CFrame,
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("SpawnTower"):InvokeServer(unpack(args))
+ 
 end)
-
-two.Name = "two"
-two.Parent = Frame
-two.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-two.Position = UDim2.new(0.0407766998, 0, 0.393048137, 0)
-two.Size = UDim2.new(0, 200, 0, 50)
-two.Font = Enum.Font.SourceSans
-two.Text = "JJ HH Gaming V2.0 (Bedwars)"
-two.TextColor3 = Color3.fromRGB(0, 0, 0)
-two.TextScaled = true
-two.TextSize = 14.000
-two.TextWrapped = true
-two.MouseButton1Down:Connect(function()
-	loadstring(game:HttpGet("https://cdn.discordapp.com/attachments/1002510858917773352/1002895558790361158/untitled.txt"))()
+ 
+Section:NewButton("UpgradeTitanSpeakerMan(850)", "ButtonInfo", function()
+    local player = game.Players.LocalPlayer
+local character = player.Character
+local rightUpperLeg = character:WaitForChild("RightUpperLeg")
+ 
+local args = {
+    [1] = "UpgradeTitanSpeakerMan",
+    [2] = rightUpperLeg.CFrame,
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("SpawnTower"):InvokeServer(unpack(args))
+ 
 end)
-
-three.Name = "three"
-three.Parent = Frame
-three.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-three.Position = UDim2.new(0.524271846, 0, 0.393048137, 0)
-three.Size = UDim2.new(0, 200, 0, 50)
-three.Font = Enum.Font.SourceSans
-three.Text = "Bridgeworm HD Admin"
-three.TextColor3 = Color3.fromRGB(0, 0, 0)
-three.TextScaled = true
-three.TextSize = 14.000
-three.TextWrapped = true
-three.MouseButton1Down:Connect(function()
-	loadstring(game:HttpGet("https://pastebin.com/WuFexNRh"))()
+ 
+Section:NewButton("Him(300)", "ButtonInfo", function()
+    local player = game.Players.LocalPlayer
+local character = player.Character
+local rightUpperLeg = character:WaitForChild("RightUpperLeg")
+ 
+local args = {
+    [1] = "Him",
+    [2] = rightUpperLeg.CFrame,
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("SpawnTower"):InvokeServer(unpack(args))
+ 
 end)
-
-Fly.Name = "Fly"
-Fly.Parent = Frame
-Fly.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Fly.Position = UDim2.new(0.0407766998, 0, 0.617647052, 0)
-Fly.Size = UDim2.new(0, 200, 0, 50)
-Fly.Font = Enum.Font.SourceSans
-Fly.Text = "Fly script V3"
-Fly.TextColor3 = Color3.fromRGB(0, 0, 0)
-Fly.TextScaled = true
-Fly.TextSize = 14.000
-Fly.TextWrapped = true
-Fly.MouseButton1Down:Connect(function()
-	loadstring(game:HttpGet("https://pastebin.com/raw/jmfHzJYW"))()
+ 
+Section:NewButton("TitanCameraManUpgrade(7500)", "ButtonInfo", function()
+    local player = game.Players.LocalPlayer
+local character = player.Character
+local rightUpperLeg = character:WaitForChild("RightUpperLeg")
+ 
+local args = {
+    [1] = "TitanCameraManUpgrade",
+    [2] = rightUpperLeg.CFrame,
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("SpawnTower"):InvokeServer(unpack(args))
+ 
 end)
-
-
-vhub.Name = "vhub"
-vhub.Parent = Frame
-vhub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-vhub.Position = UDim2.new(0.524271846, 0, 0.617647052, 0)
-vhub.Size = UDim2.new(0, 200, 0, 50)
-vhub.Font = Enum.Font.SourceSans
-vhub.Text = "VHub"
-vhub.TextColor3 = Color3.fromRGB(0, 0, 0)
-vhub.TextScaled = true
-vhub.TextSize = 14.000
-vhub.TextWrapped = true
-vhub.MouseButton1Down:Connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/SourceScript5315/sauce/main/VH-Launcher.lua"))()
+ 
+Section:NewButton("Weaponized-Cameraman(300)", "ButtonInfo", function()
+    local player = game.Players.LocalPlayer
+local character = player.Character
+local rightUpperLeg = character:WaitForChild("RightUpperLeg")
+ 
+local args = {
+    [1] = "Weaponized-Cameraman",
+    [2] = rightUpperLeg.CFrame,
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("SpawnTower"):InvokeServer(unpack(args))
+ 
 end)
--- Scripts:
-
-local function BOBNKE_fake_script() -- Frame.Script 
-	local script = Instance.new('Script', Frame)
-
-	script.Parent.Draggable = true
-end
-coroutine.wrap(BOBNKE_fake_script)()
+ 
+Section:NewButton("Scienctist CameraMan(200)", "ButtonInfo", function()
+    local player = game.Players.LocalPlayer
+local character = player.Character
+local rightUpperLeg = character:WaitForChild("RightUpperLeg")
+ 
+local args = {
+    [1] = "Scienctist CameraMan",
+    [2] = rightUpperLeg.CFrame,
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("SpawnTower"):InvokeServer(unpack(args))
+ 
+end)
